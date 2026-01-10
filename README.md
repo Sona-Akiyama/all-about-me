@@ -1,1 +1,1 @@
-# Sona AKiyama
+# Sona Akiyama
