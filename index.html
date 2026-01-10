@@ -1,125 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>My Web Page</title>
+        <title>Sona Akiyama | Portfolio</title>
         <metaname="introduction" content="Sona Akiyama"></metaname>
         <link rel="stylesheet" href="styles.css"><script src=""script.js"></script>
         <meta charset="UTF-8">
         <style>
-            h1{
-                color:#51E2F5;
-                font-family:'Times New Roman', Times, serif;
-            }
-            h2{
-                color:#A28089;
-                font-family:'Times New Roman', Times, serif;
-            }
-            p{
-                font-size:18px;
-                color:#371f17;
-                font-family:'Times New Roman', Times, serif;
-            }
-            back{
-                background-color:#FFFFE8;
+            /* General Styles */
+            body {
+                background-color: #FFFFE8;
+                font-family: 'Times New Roman', Times, serif;
+                color: #371f17;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
             }
             
-            div1 {
-                width: ;
-                height: auto;
-                padding: 20px;
-                border: #A6B6F8 solid 0px;
-                outline: #A6B6F8 solid 5px;
-                margin: 10px;
-                text-align: left;
-                background-color: #A6B6F8; 
-                box sizing: border-box;
-                border-radius: 20px
+            h1 { color:#51E2F5; border-bottom: 2px solid #51E2F5; padding-bottom: 10px; }
+            h2 { color:#A28089; margin-top: 0; }
 
-                flex: 1;
-                min-width: 150px;
+            /* The Rounded Box*/
+            .content-box {
+                background-color #A6B6F8;
+                border-radius: 20px;
+                padding: 25px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0,1);
+                max-width: 800px;
+            }
+
+            .text-white { color: #FFFFE8; }
+
+            */ Navigation Menu */
+            nav {
+                margin-bottom: 20px;
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px
+                display: inline-block;
+            }
+            nav a {
+                margin-right: 15px;
+                text-decoration: none;
+                color: #A28089;
+                font-weight: bold;
+            }
+
+            /* Sliding Picutre Gallery */
+            .slider {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 10px;
+                padding: 10px 0;
+                scrollbar-width: thin;
+            }
+            .slider img {
+                flex-shrink: 0;
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                scroll-snap-align: start;
             }
 
-            @media (max-width: 600px) {
-                div1 {
-                    flex-direction: column;
-                }
-                div1 {
-                    margin: 10px 0;
-                }        
-            }
-            div2 {
-                width: auto;
-                height: auto;
-                padding: auto;
-                border: #FFA8B6 solid 0px;
-                outline: #FFA8B6 solid 5px;
-                margin: auto;
-                text-align: right;
-                background-color: #FFA8B6;
-            }
+            /* Histry List Formatting */
+            dt { font-weight: bold; color: #FFA8B6; font-size: 1.2em; margin-top: 15px; }
+            dd { margin-bottom: 10px; margin-left: 20px; }
+
         </style>
-    </head>
+    </head>            
     <body>
-        <h1>Sona Akiyama</h1>
-        <hr><color-style: #51E2F5;></color-style:></hr>
-        <div1>
-        <h2>All About Me</h2>
-        <p><span style="color: #FFFFE8;">Junior student from Japan, at Lake Forest College.</span></p>
-        <p><span style="color: #FFFFE8;">Major: Chemistry and Economics, Minor: Environmental Studies.</span></p>
-        <p><span style="color: #FFFFE8;">My major goal is two things.<br>(1) Expand my friendship all around the world.<br>(2) With my curiosity and spirit to try everything, make a better world for more people and earth.,</span></p>
-        <p><span style="color: #FFFFE8;">Envisioning a future with happier people having enough food, clothes and place to live with cleaner air, water and soil.</span></p>
-        <img src="images/IMG_0129.HEIC" alt="New Zealand Sunrise" width="200px" height="150px">
-        </div1>
-        <p></p>
-        <div1>
-        <h2>My History</h2>
-        <dl>
-            <dt><span style="color: #FFA8B6;"> Lake Forest College (August, 2023 ~ Present) </span></dt>
-            <dd>Summer 2025: Currently summer vacation. Working at Athletic Facility Staff, Free Store Associate, Personalization Project and Online English and Japanese Tutor.</dd>
-            <dd>Belonging to Japanese Culture Club (JCC) and Student Associate American Chemistry Society (SAACS).</dd>
-            <dd>Completed coursework in Chemistry, Economics, and Black Culture with a focus on understanding and addressing environmental and racial harm.</dd>
-            <dd>I’ve developed a strong curiosity for material science, particularly exploring how environmentally friendly products can be made both accessible and affordable</dd>
-            <dd>Currently, ongoing "Global Environmental Perception Mapping Project (GEPM)! If you're interested in sharing your environmental perception, feel free to contact me!</dd>
-            <dt><span style="color: #FFA8B6;">Waseda University (April, 2023 ~ July, 2023) </span></dt>
-            <dd>Took a course on Environmental Law, which introduced me to the SDGs ‘wedding cake’ model, emphasizing environmental protection as the foundation for economic development and human well-being.</dd>
-            <dd>Also, taking humanity courses here made me realize I am more interested in learnig the base of how every action in the world works, especially for chemistry where we look deeply into molecular scale.</dd>
-            <dd>I also became interested in crochet, which made me curious about how modern clothing is produced—often from oil-based materials or recycled plastics. </dd>
-            <dd>This connected to what I learned while working on a farm about food waste.</dd>
-            <dd>I discovered that some innovative companies are turning agricultural byproducts like banana leaves and coffee grounds into textiles.</dd>
-            <dd>Additionally, researchers are even experimenting with reordering amino acid polymers in animal fur to create sustainable proteins.</dd>
-            <dt><span style="color: #FFA8B6;">Farm Production @AEON Creative Kashiwa Farm (February - August, 2023)</span></dt>
-            <dd>Worked in this GLOBAL G.A.P certified farm, from 5am-11am more than twice a week, harvesting strawberries, spinach, Japanese spinach (小松菜), and tunips.</dd>
-            <dd>Although my parents scolded me for starting work immediately after submitting my college applications, it turned out to be one of the best decisions and most meaningful experiences of my life.</dd>
-            <dd>During the application process, I realized I could no longer ignore my curiosity about real-world experiences—I needed to engage with the reality of agriculture, environment, and sustainability I deeply cared about.</dd>
-            <dd>My experience is written here. Check out <a href="https://docs.google.com/document/d/1EJvinQlHl_WfUEOktuujLkUPjFZkdJNucZoQoDkYkRE/edit?usp=sharing">"Reflecting Sustainable Agriculture as a Beginner Farmer"</a></dd>
-            <dt><span style="color: #FFA8B6;">Shibuya Senior Highschool</span></dt>
-            <dd>English Debate Club & Badminton Club</dd>
-            <dd>Career Mynavi Koshien Business Contest: Proposed a business model to improve the agricultural sustainability.</dd>
-            <dt><span style="color: #FFA8B6;">Shibuya Junior Highschool</span></dt>
-            <dd>Badminton Club</dd>
-            <dd>English Debate Club</dd>
-            <dd>Realized that I want to work with the environment and help other people as I value the connection between the people.</dd>
-            <dt><span style="color: #FFA8B6;">Japanese Public Elementary School</span></dt>
-            <dd>Happy life</dd>
-            <dd>Since this period, my future dream was to make friends all over the world and work around the world.</dd>
-            <dt>Oak English Academiy</dt>
-            <dd>Kindergarden where I learned basic English. Made me realize I like English and look for the global world</dd>
-        </dl>
-        </div1>
-        <p></p>
-        <div1>
-        <h2>Awards</h2>
-        <ul>
-            <li>Japanese Association English Step 1 Test</li>
-            <li>TOEFL 101</li>
-            <li>Dean's List 2023-2024, 2024-2025</li>
+
+        <header>
+            <h1>Sona Akiyama</h1>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#history">History</a>
+                <a href="#awards">Awards</a>
+            </nav>
+        </header>
+
+        <section id="about" class="content-box">
+            <h2>All About Me</h2>
+            <div class="text-white">
+                <p><strong>Junior student from Japan, at Lake Forest College.</strong></p>
+                <p>Major: Chemistry and Economics | Minor: Environmental Studies.</p>
+                <p>My goal is to expand friendships globally and use my curiosity to create a more sustainable earth.</p>
+            </div>
+
+            <h3>Photos</h3>
+            <div class~"slider">
+                <img src="images/IMG_0129.jpg" alt="New Zealand Sunrise">
+                <img src="images/farm.jpg" alt="Kashiwa Farm">
+                <img src="images/college.jpg" alt="Lake Forest College">
+            </div>
+        </section>
+
+        <section id="history" class="content-box" style="background-color: "fcfcfc; border: 2px solid #A6B6F8;">
+            <h2>My History</h2>
+            <dl>
+                <dt>Lake FOrest College (August 2023 ~ Present)</dt>
+                <dd>Developing material science interests; researching how to make eco-friendly products affordable.</dd>
+                <dd>Lead on "Global Environmental Perception Mapping Project (GEPM)"</dd>
+
+                <dt>Waseda University (April 2023 ~ July 2023)</dt>
+                <dd>Studied the SDGs 'wedding cake model and sustainable textiles from banana leaves and coffee grounds.</dd>
+
+                <dt>AEON Creative Kashiwa Farm (February - August 2023)</dt>
+                <dd>Hands-on agriculture experience harvesting strawberries and spinach at a GLOBAL G.A.P certified farm.</dd>
+                <dd><a href="https://docs.google.com/document/d/1EJvinQlHl_WfUEOktuujLkUPjFZkdJNucZoQoDkYkRE/edit?usp=sharing">Read my reflection on sustainable farming here.</a></dd>
+            </dl>
+        </section>
+        
+        <section id="awards" class="content-box">
+        <h2 class="text-white">Awards & Skills</h2>
+        <ul class="text-white">
+            <li>Dean's List 2023-2025</li>
             <li>Richter Scholarship</li>
-            <li>English Debate chiba Competition 1st place</li>
+            <li>TOEFL 101</li>
+            <li>English Debate Chiba Competition 1st Place</li>
         </ul>
-        </div1>
-    </body>
+    </section>
+
+</body>
 </html>
