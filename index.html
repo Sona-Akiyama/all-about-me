@@ -22,15 +22,33 @@
             back{
                 background-color:#FFFFE8;
             }
+            
             div1 {
-                width: auto;
+                width: ;
                 height: auto;
-                padding: auto;
+                padding: 20px;
                 border: #A6B6F8 solid 0px;
                 outline: #A6B6F8 solid 5px;
-                margin: auto;
-                text-align: right;
+                margin: 10px;
+                text-align: center;
                 background-color: #A6B6F8; 
+                box sizing: border-box;
+
+                flex: 1;
+                min-width: 150px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            @media (max-width: 600px) {
+                div1 {
+                    flex-direction: column;
+                }
+                div1 {
+                    margin: 10px 0;
+                }        
             }
             div2 {
                 width: auto;
@@ -91,7 +109,7 @@
             <dd>Kindergarden where I learned basic English. Made me realize I like English and look for the global world</dd>
         </dl>
         </div1>
-        <div2>
+        <div1>
         <h2>Awards</h2>
         <ul>
             <li>Japanese Association English Step 1 Test</li>
@@ -100,6 +118,6 @@
             <li>Richter Scholarship</li>
             <li>English Debate chiba Competition 1st place</li>
         </ul>
-        </div2>
+        </div1>
     </body>
 </html>
