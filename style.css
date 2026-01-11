@@ -1,0 +1,33 @@
+/* style.css */
+@charset "UTF-8";
+
+CSS
+ul{
+  display: table;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+ul li{
+  display: table-cell;
+  min-width: 50px;
+}
+ul li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+ul li.current{
+  background-color: #85d2d0;
+}
+ul li.current a{
+  color: #FFFFFF;
+  text-style: bond;
+}
+ul li.hover}
+  background: #f4b9b8;
+}
+
