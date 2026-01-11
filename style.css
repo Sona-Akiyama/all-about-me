@@ -2,17 +2,17 @@
 @charset "UTF-8";
 
 CSS
-ul{
+nav ul{
   display: table;
   margin: 0 auto;
   width: 80%;
   text-align: center;
 }
-ul li{
+nav ul li{
   display: table-cell;
   min-width: 50px;
 }
-ul li a{
+nav li a{
   display: block;
   width: 100%;
   padding: 10px 0;
@@ -20,14 +20,14 @@ ul li a{
   color: #FFFFFF;
   font-weight: bold;
 }
-ul li.current{
+nav li.current{
   background-color: #85d2d0;
 }
-ul li.current a{
+nav li.current a{
   color: #FFFFFF;
   text-style: bond;
 }
-ul li.hover}
+nav li.hover}
   background: #f4b9b8;
 }
 
