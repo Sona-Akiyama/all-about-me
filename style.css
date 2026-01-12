@@ -6,12 +6,13 @@ header{
   left: 0;
   width: 100%;
   display: flex;
-  z-index: 999;
+  z-index: 1000;
   background-color: #5c8ac6;
 }
 header ul{
   display: table;
   margin: 0 auto;
+  padding: 0;
   width: 80%;
   text-align: center;
   background-color: #5c8ac6
@@ -35,7 +36,7 @@ header li.current a{
   color: #FFFFFF;
   text-style: bond;
 }
-header li.hover{
+header li:hover{
   background-color: #f4b9b8;
 }
 
