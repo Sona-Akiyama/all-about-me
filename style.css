@@ -1,6 +1,40 @@
 /* style.css */
 @charset "UTF-8";
-
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #5c8ac6;
+}
+header ul{
+  display: table;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  }
+header ul li{
+  display: table-cell;
+  min-width: 50px;
+}
+header li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+header li.current{
+  background-color: #85d2d0;
+}
+header li.current a{
+  color: #FFFFFF;
+  text-style: bond;
+}
+header li.hover}
+  background: #f4b9b8;
+}
 
 /* General Styles */
 body {
@@ -10,9 +44,10 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 20px;
+  padding-top: 80px;
 }
             
-  h1 { color:#FFFFFF; border-bottom: 2px solid #A6B6F8; padding-bottom: 5px; }
+  h1 { color:#FFFFFF; border-bottom: 2px solid #FFFFFF; padding-bottom: 5px; }
   h2 { color:#2a2e30; margin-top: 0; }
   h3 { color:#2a2e30; margin-top: 0; }
 
@@ -49,38 +84,5 @@ body {
 /* Histry List Formatting */
 dt { font-weight: bold; color: #FFA8B6; font-size: 1.2em; margin-top: 15px; }
 dd { margin-bottom: 10px; margin-left: 20px; }
-
-header{
-  position: sticky;
-  top: 0;
-  ul{
-  display: table;
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-  }
-  ul li{
-    display: table-cell;
-    min-width: 50px;
-  }
-  li a{
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
-  }
-  li.current{
-    background-color: #85d2d0;
-  }
-  li.current a{
-    color: #FFFFFF;
-    text-style: bond;
-  }
-  li.hover}
-    background: #f4b9b8;
-  }
-}
 
 
