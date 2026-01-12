@@ -1,23 +1,26 @@
 /* style.css */
 @charset "UTF-8";
-header{
+#header{
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
+  display: flex;
+  z-index: 999;
   background-color: #5c8ac6;
 }
-header ul{
+#header ul{
   display: table;
   margin: 0 auto;
   width: 80%;
   text-align: center;
-  }
-header ul li{
+  background-color: #5c8ac6
+}
+#header ul li{
   display: table-cell;
   min-width: 50px;
 }
-header li a{
+#header li a{
   display: block;
   width: 100%;
   padding: 10px 0;
@@ -25,15 +28,15 @@ header li a{
   color: #FFFFFF;
   font-weight: bold;
 }
-header li.current{
+#header li.current{
   background-color: #85d2d0;
 }
-header li.current a{
+#header li.current a{
   color: #FFFFFF;
   text-style: bond;
 }
-header li.hover}
-  background: #f4b9b8;
+#header li.hover{
+  background-color: #f4b9b8;
 }
 
 /* General Styles */
@@ -47,9 +50,9 @@ body {
   padding-top: 80px;
 }
             
-  h1 { color:#FFFFFF; border-bottom: 2px solid #FFFFFF; padding-bottom: 5px; }
-  h2 { color:#2a2e30; margin-top: 0; }
-  h3 { color:#2a2e30; margin-top: 0; }
+h1 { color:#FFFFFF; border-bottom: 2px solid #FFFFFF; padding-bottom: 5px; }
+h2 { color:#2a2e30; margin-top: 0; }
+h3 { color:#2a2e30; margin-top: 0; }
 
 /* The Rounded Box*/
 .content-box {
