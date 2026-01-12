@@ -2,17 +2,17 @@
 @charset "UTF-8";
 
 CSS
-nav ul{
+ul{
   display: table;
   margin: 0 auto;
   width: 80%;
   text-align: center;
 }
-nav ul li{
+ul li{
   display: table-cell;
   min-width: 50px;
 }
-nav li a{
+li a{
   display: block;
   width: 100%;
   padding: 10px 0;
@@ -20,10 +20,10 @@ nav li a{
   color: #FFFFFF;
   font-weight: bold;
 }
-nav li.current{
+li.current{
   background-color: #85d2d0;
 }
-nav li.current a{
+li.current a{
   color: #FFFFFF;
   text-style: bond;
 }
