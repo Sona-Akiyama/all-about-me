@@ -49,6 +49,7 @@ body {
   margin: 0;
   padding: 20px;
   padding-top: 80px;
+  position: middle
 }
             
 h1 { color:#FFFFFF; border-bottom: 2px solid #FFFFFF; padding-bottom: 5px; }
