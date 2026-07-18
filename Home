@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sona Odyssey – Layout Practice</title>
+  <style>
+    /* --- Base layout --- */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background: #f9fafb;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    /* --- Reusable spacing helpers --- */
+    .stack-8 > * + * { margin-top: 8px; }
+    .stack-12 > * + * { margin-top: 12px; }
+    .stack-16 > * + * { margin-top: 16px; }
+    .stack-24 > * + * { margin-top: 24px; }
+    .stack-32 > * + * { margin-top: 32px; }
+
+    /* --- Buttons --- */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+                  transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: #f9fafb;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #020617;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+      border-color: #9ca3af;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      padding: 40px 0 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      letter-spacing: 0.03em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #4b5563;
+      max-width: 28rem;
+    }
+
+    .hero-right {
+      justify-self: end;
+      max-width: 320px;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+
+    /* --- MY WORK (portfolio grid) --- */
+    .section-heading {
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #111827;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: #111827;
+      margin-bottom: 16px;
+    }
+
+    .work-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .work-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .work-card-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .work-card-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+    }
+
+    .work-card-desc {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* --- PROFESSIONAL SKILLS (two-column list) --- */
+    .skills {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .skills-intro {
+      font-size: 0.98rem;
+      color: #4b5563;
+      max-width: 22rem;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px 32px;
+    }
+
+    .skill-item {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .skill-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.4em;
+      width: 8px;
+      height: 2px;
+      background: #111827;
+      border-radius: 999px;
+    }
+
+    .skill-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .skill-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* --- TRAVEL STORIES (blog list style) --- */
+    .travel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .travel-subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      max-width: 22rem;
+    }
+
+    .travel-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .travel-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .travel-post {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .travel-post-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .travel-post-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .travel-post-excerpt {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .travel-aside {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* --- SMALL STRIP --- */
+    .strip {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 999px;
+      padding: 14px 24px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* --- Responsive tweaks --- */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        justify-self: start;
+      }
+
+      .skills {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .travel-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="stack-24">
+        <div class="stack-12">
+          <h1 class="hero-title">Sona Odyssey</h1>
+          <p class="hero-subtitle">
+            The intersection of career and discovery.
+          </p>
+        </div>
+
+        <div class="button-row">
+          <a href="#my-work" class="btn btn-primary">View Portfolio</a>
+          <a href="#travel-stories" class="btn btn-secondary">Explore Travel</a>
+        </div>
+      </div>
+
+      <div class="hero-right stack-16">
+        <p>
+          A living portfolio of projects, skills, and journeys that go beyond a
+          traditional résumé.
+        </p>
+        <p>
+          Use this layout to study how spacing, grids, and buttons work together.
+        </p>
+      </div>
+    </section>
+
+    <!-- MY WORK -->
+    <section id="my-work">
+      <div class="divider"></div>
+      <h2 class="section-heading">Selected Projects</h2>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-card-meta">Brand Strategy · 2025</div>
+          <div class="work-card-title">Global Repositioning for Tech Brand</div>
+          <p class="work-card-desc">
+            Led a cross‑market repositioning to align product, story, and visual
+            identity across three regions.
+          </p>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card-meta">Content Systems</div>
+          <div class="work-card-title">Knowledge Hub for Remote Teams</div>
+          <p class="work-card-desc">
+            Built a content framework that turned scattered docs into a single,
+            searchable source of truth.
+          </p>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card-meta">Experience Design</div>
+          <div class="work-card-title">Onboarding Journey Redesign</div>
+          <p class="work-card-desc">
+            Simplified a complex onboarding flow, improving activation and
+            reducing drop‑off.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL SKILLS -->
+    <section>
+      <h2 class="section-heading">Professional Skills</h2>
+
+      <div class="skills stack-24">
+        <p class="skills-intro">
+          A blend of strategic leadership, storytelling, and structured
+          execution — shaped by both boardrooms and border crossings.
+        </p>
+
+        <div class="skills-list">
+          <div class="skill-item">
+            <div class="skill-title">Strategic Leadership</div>
+            <p class="skill-text">
+              Guiding complex organizational transitions with a clear narrative
+              and measurable outcomes.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title">Global Branding</div>
+            <p class="skill-text">
+              Developing brand identities that resonate across cultures without
+              losing their core.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title">Content Strategy</div>
+            <p class="skill-text">
+              Turning scattered ideas into structured systems that scale across
+              channels and teams.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title">Market Analysis</div>
+            <p class="skill-text">
+              Using data and field insight to spot patterns, risks, and
+              opportunities early.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title">Project Management</div>
+            <p class="skill-text">
+              Managing complex portfolios with clear scope, timelines, and
+              communication.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-title">Global Discovery</div>
+            <p class="skill-text">
+              Bringing lessons from travel and cross‑cultural work back into
+              strategy and execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAVEL STORIES -->
+    <section id="travel-stories">
+      <div class="travel-header">
+        <div>
+          <h2 class="section-heading">Travel Stories</h2>
+        </div>
+        <p class="travel-subtitle">
+          Field notes from journeys that shaped how I think about work, culture,
+          and long‑term growth.
+        </p>
+      </div>
+
+      <div class="travel-list">
+        <div class="travel-posts">
+          <article class="travel-post">
+            <div class="travel-post-meta">JAPAN · REFLECTION</div>
+            <div class="travel-post-title">Learning to Move Slower in Tokyo</div>
+            <p class="travel-post-excerpt">
+              In a city that never stops, I found the value of deliberate pauses
+              — and how they changed my work rhythm.
+            </p>
+          </article>
+
+          <article class="travel-post">
+            <div class="travel-post-meta">PORTUGAL · CAREER BREAK</div>
+            <div class="travel-post-title">Designing a Life, Not a Resume</div>
+            <p class="travel-post-excerpt">
+              A month on the coast reframed how I think about ambition, rest,
+              and long‑term planning.
+            </p>
+          </article>
+
+          <article class="travel-post">
+            <div class="travel-post-meta">MEXICO CITY · CURIOSITY</div>
+            <div class="travel-post-title">Following Questions, Not Itineraries</div>
+            <p class="travel-post-excerpt">
+              Letting curiosity lead the way opened up new ways of listening —
+              to people, places, and projects.
+            </p>
+          </article>
+        </div>
+
+        <aside class="travel-aside stack-16">
+          <p>
+            Think of this as the “travel blog” side of Sona Odyssey — where
+            personal journeys and professional growth overlap.
+          </p>
+          <p>
+            Layout‑wise, this uses a two‑column grid: posts on the left, context
+            on the right.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SMALL STRIP -->
+    <section>
+      <div class="strip">
+        Professional growth meets global discovery.
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
